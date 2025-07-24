@@ -1,4 +1,4 @@
-** start of script.js **
+
 
 function isLeapYear(year)
 {
@@ -20,5 +20,5 @@ year=2000;
 result=isLeapYear(year);
 console.log(result);
 
-** end of script.js **
+
 

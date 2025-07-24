@@ -1,4 +1,3 @@
-** start of script.js **
 
 
 let questions=[
@@ -57,5 +56,5 @@ const getResults=(selected,choices) =>{
 }
 
 
-** end of script.js **
+
 

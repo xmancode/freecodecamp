@@ -1,4 +1,4 @@
-** start of script.js **
+
 
 let lunches=[];
 const addLunchToEnd=(lunches,item)=>{
@@ -63,5 +63,4 @@ else{
 
 
 
-** end of script.js **
 
