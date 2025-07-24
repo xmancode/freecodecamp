@@ -35,4 +35,4 @@ Projects using front-end libraries like React, Bootstrap, and others.
 ## How to Run
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/freecodecamp-projects.git
+   git clone https://github.com/xmancode/freecodecamp.git
