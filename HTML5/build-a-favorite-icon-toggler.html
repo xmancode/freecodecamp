@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Favorite Icon Toggler</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      main{
+
+max-width:20vw;
+min-width:200px;
+
+text-align:center;
+margin-right:auto;
+margin-left:auto;
+margin-top:20vh;
+}
+
+ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  background:white;
+}
+li{
+  display:flex;
+  justify-content:space-between;
+  padding:18px;
+  align-items:center;
+  border-bottom:1px solid #ccc;
+
+}
+.favorite-icon{
+  font-size:22px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+.filled{
+  font-size:24px;
+  color:red;
+  
+}
+    </style>
+    
+  </head>
+
+  
+    <main>
+    <h1>Art Supplies</h1>
+    <ul class="item-list">
+      <li >
+        Painting Brush
+        <button class="favorite-icon">&#9825;</button>
+      </li>
+      <li >
+        Water colour set
+        <button class="favorite-icon">&#9825;</button>
+      </li>
+      <li >
+        Canvas Set
+        <button class="favorite-icon">&#9825;</button>
+      </li>
+    </ul>
+  </main>
+  <body>
+    <script>
+      const heartBtns = document.querySelectorAll(".favorite-icon");
+
+heartBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    
+   if(button.classList.contains("filled")){
+     button.classList.remove("filled");
+     button.innerHTML="&#9825;";
+   }
+   else{
+     button.classList.add("filled");
+     button.innerHTML="&#10084;";
+   }
+  });
+});
+    </script>
+  </body>
+</html>
+
+
+
+
+
