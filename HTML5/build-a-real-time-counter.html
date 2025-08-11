@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body{
+  background-color:#a2dbe0;
+}
+h1{
+  color:purple;
+  background-color:pink;
+  display: inline-block;
+  border-radius:5px;
+  padding:5px;
+}
+
+.main{
+  margin-top:20vh;
+  text-align:center;
+}
+#text-input{
+  width:300px;
+  min-width:150px;
+  display: block;
+  margin:0 auto;
+  height:150px;
+  border-radius:5px;
+  resize:none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+textarea:focus {
+  outline: 2px solid white; /* gray outline on focus */
+}
+#char-count{
+  font-size:1.2rem;
+  font-family: Arial, sans-serif;
+  color:#404f49;
+}
+    </style>
+    <title>Real Time Counter</title>
+</head>
+
+<body>
+<div class="main">
+    <h1>Check Real Time words count</h1>
+<textarea id="text-input" placeholder="type anything..."></textarea>
+<p id="char-count">Character Count: 0/50</p>
+<script src="script.js"></script>
+</div>
+<script>
+const textarea=document.getElementById("text-input");
+ const textcounter=document.getElementById("char-count");
+let count=0;
+let text=textarea.value;
+textarea.addEventListener("input",()=>{
+  count=textarea.value.length;
+  textarea.innerHTML=textarea.value.slice(0,50);
+
+ if(count<=50)
+{
+  textcounter.innerHTML=`Character Count: ${count}/50`;
+  if(count==50){
+    textcounter.style.color="red";
+  }
+  }
+  else{
+    textarea.value=textarea.value.substring(0,50);
+    textcounter.style.color="red";
+  }
+  
+})
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
